@@ -36,7 +36,7 @@ class SlapperEntity extends Entity {
         $this->setNameTagVisible(false);
     }
 
-    public function saveNBT(): void {
+    public function saveNBT(): CompoundTag {
         parent::saveNBT();
         $this->saveSlapperNbt();
     }
