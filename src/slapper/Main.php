@@ -589,11 +589,11 @@ class Main extends PluginBase implements Listener {
         if ($type === "Human") {
             $player->saveNBT();
 
-            $inventoryTag = $player->namedtag->getListTag("Inventory");
+            $inventoryTag = $player->saveNBT()->getListTag("Inventory");
             assert($inventoryTag !== null);
             $nbt->setTag(clone $inventoryTag);
 
-            $skinTag = $player->namedtag->getCompoundTag("Skin");
+            $skinTag = $player->saveNBT()->getCompoundTag("Skin");
             assert($skinTag !== null);
             $nbt->setTag(clone $skinTag);
         }
